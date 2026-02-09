@@ -112,7 +112,7 @@ with st.form("production_tracker_form", clear_on_submit=True):
     
     colI1, colI2 = st.columns([1, 2])
     with colI1: st.markdown('<p class="question-text">Q10: ETA</p>', unsafe_allow_html=True)
-      with colD2: order_date = st.date_input("ETA", label_visibility="collapsed")
+    with colI2: order_date = st.date_input("ETA", label_visibility="collapsed")
 
     colJ1, colJ2 = st.columns([1, 2])
     with colJ1: st.markdown('<p class="question-text">Q11: Remarks</p>', unsafe_allow_html=True)
@@ -172,4 +172,5 @@ if u_name in users and users[u_name] == p_word:
     if os.path.isfile('responses.xlsx'):
         with open("responses.xlsx", "rb") as f:
             st.sidebar.download_button("📥 Download Excel Sheet", f, file_name="Production_Tracker_Report.xlsx")
+
 
