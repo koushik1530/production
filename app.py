@@ -29,7 +29,7 @@ def save_to_excel(new_data):
     df.to_excel(file, index=False)
 
 st.title("🏭 Purchasing Production Tracker")
-st.info("High Priority: Please complete all 15 fields below.")
+
 
 # --- FORM UI ---
 with st.form("production_tracker_form", clear_on_submit=True):
@@ -154,3 +154,4 @@ if u_name in users and users[u_name] == p_word:
     if os.path.isfile('responses.xlsx'):
         with open("responses.xlsx", "rb") as f:
             st.sidebar.download_button("📥 Download Excel Sheet", f, file_name="Production_Tracker.xlsx")
+
